@@ -3,19 +3,21 @@ import os
 import random
 import sys
 import pandas as pd
+import cv2
 import numpy as np
 
 
 def get_data(dataset):
-    print("Loading dataset...")
+    print("Loading training set...")
     table = pd.read_csv("../data/"+dataset, header=None)
-    filenames = [item[0].split("/")[-1].split('.')[0] for item in table.values]
+    filenames = [item[0] for item in table.values]
     class_ids = [int(item[0].split("/")[-1].split("_")[-1].split(".")[0])-1 for item in table.values]
     data = []
     for index, filename in enumerate(filenames):
-        visit = np.load("../data/train_visit/"+filename+".npy")
+        image = cv2.imread(filename, cv2.IMREAD_COLOR)
+        visit = np.load("../data/train_visit/"+filename.split('/')[-1].split('.')[0]+".npy")
         label = class_ids[index]
-        data.append([visit, label])
+        data.append([image, visit, label])
     random.seed(0)
     random.shuffle(data)
     print("Loading completed...")
@@ -32,22 +34,24 @@ def bytes_feature(values):
     return tf.train.Feature(bytes_list=tf.train.BytesList(value=[values]))
 
 
-def image_to_tfexample(data, label):
+def image_to_tfexample(data, visit, label):
     return tf.train.Example(features=tf.train.Features(feature={
-        'visit': bytes_feature(data),
+        'data': bytes_feature(data),
+        'visit': bytes_feature(visit),
         'label': int64_feature(label),
     }))
 
 
 def _convert_dataset(data, tfrecord_path, dataset):
     """ Convert data to TFRecord format. """
-    output_filename = os.path.join(tfrecord_path, dataset+"_visit.tfrecord")
+    output_filename = os.path.join(tfrecord_path, dataset+"_multimodal.tfrecord")
     tfrecord_writer = tf.python_io.TFRecordWriter(output_filename)
     length = len(data)
     for index, item in enumerate(data):
         data_ = item[0].tobytes()
-        label = item[1]
-        example = image_to_tfexample(data_, label)
+        visit = item[1].tobytes()
+        label = item[2]
+        example = image_to_tfexample(data_, visit, label)
         tfrecord_writer.write(example.SerializeToString())
         sys.stdout.write('\r>> Converting image %d/%d' % (index + 1, length))
         sys.stdout.flush()
@@ -56,7 +60,9 @@ def _convert_dataset(data, tfrecord_path, dataset):
 
 
 if __name__ == '__main__':
+
     data = get_data("train_oversampling.txt")
     _convert_dataset(data, "../data/", "train")
+
     data = get_data("valid.txt")
     _convert_dataset(data, "../data/", "valid")
