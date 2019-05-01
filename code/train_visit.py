@@ -103,16 +103,17 @@ def train(model):
                                                                                          model.training: True})
                 writer_train.add_summary(summary, step)
                 image_valid, label_valid = sess.run([image_batch_valid, label_batch_valid])
-                acc_valid, summary = sess.run([model.accuracy, model.merged], feed_dict={model.image: image_valid,
+                acc_valid, summary, output = sess.run([model.accuracy, model.merged, model.output], feed_dict={model.image: image_valid,
                                                                                          model.label: label_valid,
                                                                                          model.training: True})
+                print(output[0])
                 writer_valid.add_summary(summary, step)
                 print('[epoch %d, step %d/%d]: train acc %.3f, valid acc %.3f' % (step // (amount // batch_size),
                                                                                   step % (amount // batch_size),
                                                                                   amount // batch_size, acc_train,
                                                                                   acc_valid),
                       'time %.3fs' % (time.time() - time1))
-            if step % 1000 == 0:
+            if step % 500 == 0:
                 print("Save the model Successfully")
                 saver.save(sess, "../model/"+dirId+"/model.ckpt", global_step=step)
 

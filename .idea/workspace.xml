@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a774639b-61d5-4d25-b233-36f1af59ed34" name="Default Changelist" comment="" />
+    <list default="true" id="a774639b-61d5-4d25-b233-36f1af59ed34" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/model_visit.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/model_visit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/train_visit.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/train_visit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/visit2array.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/visit2array.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/model_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="23" selection-end-line="114" />
+            <state relative-caret-position="130">
+              <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -25,29 +32,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/train_visit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="910">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="717">
+              <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/python/ops/image_ops_impl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11838">
-              <caret line="253" column="4" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/model_visit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-728">
-              <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+            <state relative-caret-position="260">
+              <caret line="19" column="66" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="67" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -56,10 +51,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/visit2array.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+            <state relative-caret-position="676">
+              <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -70,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="234">
+              <caret line="15" column="61" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="62" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -90,39 +106,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tables</find>
       <find>512, 128, 128, 512</find>
+      <find>tables</find>
     </findStrings>
     <replaceStrings>
       <replace>channel*8, channel*2, channel*2, channel*8</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/2019Competition" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/code/test.py" />
         <option value="$PROJECT_DIR$/code/tfrecord.py" />
         <option value="$PROJECT_DIR$/code/tfrecord_valid.py" />
         <option value="$PROJECT_DIR$/code/train.py" />
         <option value="$PROJECT_DIR$/code/model.py" />
         <option value="$PROJECT_DIR$/code/tfrecord_train.py" />
-        <option value="$PROJECT_DIR$/code/tfrecord_visit.py" />
         <option value="$PROJECT_DIR$/code/tfrecord_image.py" />
-        <option value="$PROJECT_DIR$/code/visit2array.py" />
         <option value="$PROJECT_DIR$/train_visit.py" />
         <option value="$PROJECT_DIR$/code/model_visit.py" />
+        <option value="$PROJECT_DIR$/code/tfrecord_visit.py" />
+        <option value="$PROJECT_DIR$/code/test.py" />
         <option value="$PROJECT_DIR$/code/train_visit.py" />
+        <option value="$PROJECT_DIR$/code/model_image.py" />
+        <option value="$PROJECT_DIR$/code/visit2array.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="2578" />
-    <option name="height" value="1408" />
+    <option name="x" value="302" />
+    <option name="y" value="857" />
+    <option name="width" value="2225" />
+    <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -155,6 +172,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -245,29 +263,31 @@
       <option name="presentableId" value="Default" />
       <updated>1556615900726</updated>
       <workItem from="1556615901882" duration="1043000" />
-      <workItem from="1556621329741" duration="22995000" />
+      <workItem from="1556621329741" duration="25636000" />
+      <workItem from="1556709846397" duration="6160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24038000" />
+    <option name="totallyTimeSpent" value="32839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.296875" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12011719" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.43996063" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43996063" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.4659091" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.1437008" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -275,7 +295,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.32984033" />
+      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.32958984" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
@@ -291,25 +311,12 @@
     <entry file="file://$USER_HOME$/AppData/Local/Continuum/anaconda3/Lib/site-packages/tensorflow/tools/api/generator/api/image/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/visit2array.py">
+    <entry file="file://$PROJECT_DIR$/code/train_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        <state>
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/test.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -321,52 +328,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
+    <entry file="file://$PROJECT_DIR$/code/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1352">
-          <caret line="58" column="36" lean-forward="true" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/train_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/model_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="23" selection-end-line="114" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="104">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/train_visit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="717">
+          <caret line="116" column="28" selection-start-line="116" selection-start-column="28" selection-end-line="116" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="15" column="61" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="62" />
           <folding>
-            <element signature="e#0#30#0" expanded="true" />
+            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/model_visit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-728">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="260">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="67" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/model_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="59" column="26" lean-forward="true" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/visit2array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -15,7 +15,7 @@ class VisitModel(object):
         self.training = tf.placeholder(tf.bool)
         self.output = self.model(self.image)
         self.loss = self.get_loss(self.output, self.one_hot)
-        self.batch_size = 1024
+        self.batch_size = 512
         with tf.name_scope('correct_prediction'):
             correct_prediction = tf.equal(tf.argmax(self.output, 1), tf.argmax(self.one_hot, 1))
         with tf.name_scope('accuracy'):

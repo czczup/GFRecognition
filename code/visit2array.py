@@ -20,6 +20,7 @@ print(date2position)
 def visit2array(table):
     strings = table[1]
     init = np.zeros((7, 26, 24))
+    # human_amount = len(strings)
     for string in strings:
         temp = []
         for item in string.split(','):
@@ -28,6 +29,7 @@ def visit2array(table):
             x, y = date2position[datestr2dateint[date]]
             for visit in visit_lst:
                 init[x][y][str2int[visit]] += 1
+    # init = init / human_amount
     return init
 
 
@@ -75,11 +77,8 @@ def visit2array_valid():
 
 
 if __name__ == '__main__':
-    dataset = input("train, valid, or test: ")
-    if dataset == "train":
-        visit2array_train()
-    elif dataset == "valid":
-        visit2array_valid()
-    elif dataset == "test":
-        visit2array_test()
+    # dataset = input("train, valid, or test: ")
+    visit2array_train()
+    visit2array_valid()
+    visit2array_test()
 
