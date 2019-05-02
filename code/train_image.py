@@ -2,6 +2,7 @@ from model_image import Resnet
 import tensorflow as tf
 import time
 import os
+import math
 
 
 def read_and_decode_train(filename):
@@ -15,12 +16,13 @@ def read_and_decode_train(filename):
                                        })  # return image and label
     image = tf.decode_raw(features['data'], tf.uint8)
     image = tf.reshape(image, [100, 100, 3])
-    image = tf.random_crop(image, [88, 88, 3])
     image = tf.image.random_flip_left_right(image)
     image = tf.image.random_flip_up_down(image)
-    image = tf.image.random_brightness(image, max_delta=0.1)  # 随机亮度调整
-    image = tf.image.random_contrast(image, lower=0.8, upper=1.2)  # 随机对比度
-    # image = tf.image.per_image_standardization(image)
+    # image = tf.image.random_brightness(image, max_delta=0.1)  # 随机亮度调整
+    # image = tf.image.random_contrast(image, lower=0.8, upper=1.2)  # 随机对比度
+    # image = tf.contrib.image.rotate(image, tf.random_uniform([1], maxval=2*math.pi))
+    image = tf.random_crop(image, [88, 88, 3])
+
     image = tf.cast(image, tf.float32) / 255.0
     label = tf.cast(features['label'], tf.int64)
     return image, label
@@ -117,7 +119,7 @@ def train(model):
                                                                                   amount // batch_size, acc_train,
                                                                                   acc_valid),
                       'time %.3fs' % (time.time() - time1))
-            if step % 1000 == 0:
+            if step % 100 == 0:
                 print("Save the model Successfully")
                 saver.save(sess, "../model/"+dirId+"/model.ckpt", global_step=step)
 
