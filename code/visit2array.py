@@ -20,7 +20,7 @@ print(date2position)
 def visit2array(table):
     strings = table[1]
     init = np.zeros((7, 26, 24))
-    # human_amount = len(strings)
+    human_amount = len(strings)
     for string in strings:
         temp = []
         for item in string.split(','):
@@ -29,8 +29,8 @@ def visit2array(table):
             x, y = date2position[datestr2dateint[date]]
             for visit in visit_lst:
                 init[x][y][str2int[visit]] += 1
-    # init = init / human_amount
-    return init
+    init_ = init / human_amount
+    return np.concatenate((init, init_), axis=-1)
 
 
 def visit2array_test():
