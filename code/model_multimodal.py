@@ -19,23 +19,24 @@ class MultiModal(object):
         self.output_visit = self.visit_network(self.visit)
         self.output = tf.concat([self.output_image, self.output_visit], axis=1)
         self.prediction = tf.layers.dense(self.output, units=9)
-        self.prediction_image = tf.layers.dense(self.output_image, units=9)
-        self.prediction_visit = tf.layers.dense(self.output_visit, units=9)
+        # self.prediction_image = tf.layers.dense(self.output_image, units=9)
+        # self.prediction_visit = tf.layers.dense(self.output_visit, units=9)
 
-        self.loss = self.get_loss(self.prediction, self.prediction_image, self.prediction_visit, self.one_hot)
+        # self.loss = self.get_loss(self.prediction, self.prediction_image, self.prediction_visit, self.one_hot)
+        self.loss = self.get_loss(self.prediction, self.one_hot)
 
         self.batch_size = 512
         with tf.name_scope('correct_prediction'):
             correct_prediction = tf.equal(tf.argmax(self.prediction, 1), tf.argmax(self.one_hot, 1))
-            correct_prediction1 = tf.equal(tf.argmax(self.prediction_image, 1), tf.argmax(self.one_hot, 1))
-            correct_prediction2 = tf.equal(tf.argmax(self.prediction_visit, 1), tf.argmax(self.one_hot, 1))
+            # correct_prediction1 = tf.equal(tf.argmax(self.prediction_image, 1), tf.argmax(self.one_hot, 1))
+            # correct_prediction2 = tf.equal(tf.argmax(self.prediction_visit, 1), tf.argmax(self.one_hot, 1))
         with tf.name_scope('accuracy'):
             self.accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-            accuracy1 = tf.reduce_mean(tf.cast(correct_prediction1, tf.float32))
-            accuracy2 = tf.reduce_mean(tf.cast(correct_prediction2, tf.float32))
+            # accuracy1 = tf.reduce_mean(tf.cast(correct_prediction1, tf.float32))
+            # accuracy2 = tf.reduce_mean(tf.cast(correct_prediction2, tf.float32))
             tf.summary.scalar('train_accuracy_concat', self.accuracy)
-            tf.summary.scalar('train_accuracy_image', accuracy1)
-            tf.summary.scalar('train_accuracy_visit', accuracy2)
+            # tf.summary.scalar('train_accuracy_image', accuracy1)
+            # tf.summary.scalar('train_accuracy_visit', accuracy2)
 
         update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
         with tf.control_dependencies(update_ops):
@@ -90,7 +91,7 @@ class MultiModal(object):
         return flatten
 
     def visit_network(self, image):
-        channel = 8
+        channel = 32
         with tf.name_scope("Resnet-visit"):
             with tf.name_scope('stage1'):
                 conv = self.conv2d(image, 24, channel, 7, 1)
@@ -109,22 +110,22 @@ class MultiModal(object):
                 flatten = tf.layers.flatten(pool)
         return flatten
 
-    def get_loss(self, output_concat, output_image, output_visit, onehot):
+    def get_loss(self, output_concat, onehot):
         with tf.name_scope("loss"):
             losses1 = tf.nn.softmax_cross_entropy_with_logits(logits=output_concat, labels=onehot)
             loss1 = tf.reduce_mean(losses1)
             tf.summary.scalar('loss-concat', loss1)
-
-            losses2 = tf.nn.softmax_cross_entropy_with_logits(logits=output_image, labels=onehot)
-            loss2 = tf.reduce_mean(losses2)
-            tf.summary.scalar('loss-image', loss2)
-
-            losses3 = tf.nn.softmax_cross_entropy_with_logits(logits=output_visit, labels=onehot)
-            loss3 = tf.reduce_mean(losses3)
-            tf.summary.scalar('loss-visit', loss3)
-
-            total_loss = loss1 + loss2 + loss3
-            tf.summary.scalar('loss-total', total_loss)
+            #
+            # losses2 = tf.nn.softmax_cross_entropy_with_logits(logits=output_image, labels=onehot)
+            # loss2 = tf.reduce_mean(losses2)
+            # tf.summary.scalar('loss-image', loss2)
+            #
+            # losses3 = tf.nn.softmax_cross_entropy_with_logits(logits=output_visit, labels=onehot)
+            # loss3 = tf.reduce_mean(losses3)
+            # tf.summary.scalar('loss-visit', loss3)
+            #
+            total_loss = loss1
+            # tf.summary.scalar('loss-total', total_loss)
         return total_loss
 
     def get_num_params(self):
