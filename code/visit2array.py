@@ -77,7 +77,7 @@ def visit2array_valid():
 
 
 if __name__ == '__main__':
-    # dataset = input("train, valid, or test: ")
+
     visit2array_train()
     visit2array_valid()
     visit2array_test()

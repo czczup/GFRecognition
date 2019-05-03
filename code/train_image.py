@@ -47,7 +47,7 @@ def read_and_decode_valid(filename):
 
 def load_training_set():
     with tf.name_scope('input_train'):
-        image_train, label_train = read_and_decode_train("../data/train.tfrecord")
+        image_train, label_train = read_and_decode_train("../data/tfrecord/train.tfrecord")
         image_batch_train, label_batch_train = tf.train.shuffle_batch(
             [image_train, label_train], batch_size=batch_size, capacity=10240, min_after_dequeue=5120, num_threads=4
         )
@@ -57,7 +57,7 @@ def load_training_set():
 def load_valid_set():
     # Load Testing set.
     with tf.name_scope('input_valid'):
-        image_valid, label_valid = read_and_decode_valid("../data/valid.tfrecord")
+        image_valid, label_valid = read_and_decode_valid("../data/tfrecord/valid.tfrecord")
         image_batch_valid, label_batch_valid = tf.train.shuffle_batch(
             [image_valid, label_valid], batch_size=batch_size, capacity=10240, min_after_dequeue=5120, num_threads=4
         )

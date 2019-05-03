@@ -62,7 +62,7 @@ def _convert_dataset(data, tfrecord_path, dataset):
 if __name__ == '__main__':
 
     data = get_data("train_oversampling.txt")
-    _convert_dataset(data, "../data/", "train")
+    _convert_dataset(data, "../data/tfrecord/", "train")
 
     data = get_data("valid.txt")
-    _convert_dataset(data, "../data/", "valid")
+    _convert_dataset(data, "../data/tfrecord/", "valid")

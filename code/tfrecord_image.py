@@ -59,7 +59,7 @@ if __name__ == '__main__':
     file = input("train or valid: ")
     if file == "train":
         data = get_data("train_oversampling.txt")
-        _convert_dataset(data, "../data/", "train")
+        _convert_dataset(data, "../data/tfrecord/", "train")
     elif file == "valid":
         data = get_data("valid.txt")
-        _convert_dataset(data, "../data/", "valid")
+        _convert_dataset(data, "../data/tfrecord/", "valid")

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a774639b-61d5-4d25-b233-36f1af59ed34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/result/0.6536.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/.ipynb_checkpoints/test_train_valid-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/.ipynb_checkpoints/test_train_valid-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/test_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/test_test.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/test_train_valid.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/code/test_train_valid.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/tfrecord_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/tfrecord_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/tfrecord_multimodal.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/tfrecord_multimodal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/tfrecord_visit.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/tfrecord_visit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/train_image.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/train_image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/train_multimodal.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/train_multimodal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/train_visit.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/train_visit.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/visit2array.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/visit2array.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/train_visit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="16" column="40" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="40" />
+            <state relative-caret-position="-598">
+              <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -29,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/train_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            <state relative-caret-position="598">
+              <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -39,10 +41,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/train_multimodal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="402">
+              <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/visit2array.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="290">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -51,10 +62,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
+        <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="586">
+              <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -63,10 +74,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/tfrecord_multimodal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="638">
+              <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+              <folding>
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/code/model_visit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1508">
-              <caret line="8" column="68" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="68" />
+            <state relative-caret-position="338">
+              <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -103,26 +138,26 @@
         <option value="$PROJECT_DIR$/code/train.py" />
         <option value="$PROJECT_DIR$/code/model.py" />
         <option value="$PROJECT_DIR$/code/tfrecord_train.py" />
-        <option value="$PROJECT_DIR$/code/tfrecord_image.py" />
         <option value="$PROJECT_DIR$/train_visit.py" />
         <option value="$PROJECT_DIR$/code/test.py" />
-        <option value="$PROJECT_DIR$/code/tfrecord_visit.py" />
-        <option value="$PROJECT_DIR$/code/tfrecord_multimodal.py" />
-        <option value="$PROJECT_DIR$/code/train_multimodal.py" />
         <option value="$PROJECT_DIR$/code/model_multimodal.py" />
         <option value="$PROJECT_DIR$/code/model_image.py" />
-        <option value="$PROJECT_DIR$/code/train_image.py" />
-        <option value="$PROJECT_DIR$/code/visit2array.py" />
-        <option value="$PROJECT_DIR$/code/train_visit.py" />
         <option value="$PROJECT_DIR$/code/model_visit.py" />
+        <option value="$PROJECT_DIR$/code/visit2array.py" />
+        <option value="$PROJECT_DIR$/code/tfrecord_image.py" />
+        <option value="$PROJECT_DIR$/code/tfrecord_multimodal.py" />
+        <option value="$PROJECT_DIR$/code/tfrecord_visit.py" />
+        <option value="$PROJECT_DIR$/code/train_image.py" />
+        <option value="$PROJECT_DIR$/code/train_multimodal.py" />
+        <option value="$PROJECT_DIR$/code/train_visit.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="2578" />
-    <option name="height" value="1408" />
+    <option name="x" value="1968" />
+    <option name="y" value="-37" />
+    <option name="width" value="2579" />
+    <option name="height" value="1409" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -132,12 +167,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="2019Competition" type="b2602c69:ProjectViewProjectNode" />
               <item name="2019Competition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="2019Competition" type="b2602c69:ProjectViewProjectNode" />
+              <item name="2019Competition" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="2019Competition" type="b2602c69:ProjectViewProjectNode" />
@@ -153,7 +194,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,17 +316,19 @@
       <updated>1556615900726</updated>
       <workItem from="1556615901882" duration="1043000" />
       <workItem from="1556621329741" duration="25636000" />
-      <workItem from="1556709846397" duration="31194000" />
+      <workItem from="1556709846397" duration="31735000" />
+      <workItem from="1556851143179" duration="488000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57873000" />
+    <option name="totallyTimeSpent" value="58902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="2062" height="1126" extended-state="6" />
+    <frame x="1913" y="-7" width="2062" height="1126" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2163086" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16210938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -298,7 +340,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="File Transfer" order="9" weight="0.1437008" />
+      <window_info anchor="bottom" id="File Transfer" order="9" visible="true" weight="0.1437008" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
@@ -306,7 +348,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Remote Host" order="3" visible="true" weight="0.12695312" />
+      <window_info anchor="right" id="Remote Host" order="3" visible="true" weight="0.14160156" />
       <window_info anchor="right" id="SciView" order="4" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
@@ -343,16 +385,6 @@
     <entry file="file://$PROJECT_DIR$/code/check_data.ipynb">
       <provider selected="true" editor-type-id="jupyter-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="63" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/model_image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1664">
@@ -373,27 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/train_multimodal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="977">
-          <caret line="120" column="55" selection-start-line="120" selection-start-column="55" selection-end-line="120" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/model_multimodal.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/code/tfrecord_multimodal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="17" column="64" lean-forward="true" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -421,10 +436,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/model_visit.py">
+    <entry file="file://$PROJECT_DIR$/code/visit2array.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1508">
-          <caret line="8" column="68" selection-start-line="8" selection-start-column="66" selection-end-line="8" selection-end-column="68" />
+        <state relative-caret-position="290">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/tfrecord_image.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="62" column="25" lean-forward="true" selection-start-line="62" selection-start-column="25" selection-end-line="62" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/tfrecord_multimodal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="67" column="45" selection-start-line="67" selection-start-column="45" selection-end-line="67" selection-end-column="45" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
@@ -433,28 +468,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/tfrecord_visit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="326">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/visit2array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/train_image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="12" column="37" lean-forward="true" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        <state relative-caret-position="598">
+          <caret line="59" column="75" selection-start-line="59" selection-start-column="75" selection-end-line="59" selection-end-column="75" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
@@ -463,8 +488,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/code/train_visit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="-598">
+          <caret line="52" column="75" selection-start-line="52" selection-start-column="75" selection-end-line="52" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/test_train_valid.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/test_test.ipynb">
+      <provider selected="true" editor-type-id="jupyter-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/train_multimodal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="69" column="9" lean-forward="true" selection-start-line="69" selection-start-column="9" selection-end-line="69" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/model_visit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
