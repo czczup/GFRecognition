@@ -9,13 +9,13 @@ import numpy as np
 
 def get_data(dataset):
     print("Loading training set...")
-    table = pd.read_csv("../data/"+dataset, header=None)
+    table = pd.read_csv("../../data/"+dataset, header=None)
     filenames = [item[0] for item in table.values]
     class_ids = [int(item[0].split("/")[-1].split("_")[-1].split(".")[0])-1 for item in table.values]
     data = []
     for index, filename in enumerate(filenames):
-        image = cv2.imread(filename, cv2.IMREAD_COLOR)
-        visit = np.load("../data/train_visit/"+filename.split('/')[-1].split('.')[0]+".npy")
+        image = cv2.imread("../../"+filename, cv2.IMREAD_COLOR)
+        visit = np.load("../../data/npy/train_visit/"+filename.split('/')[-1].split('.')[0]+".npy")[:, :, 0:24]
         label = class_ids[index]
         data.append([image, visit, label])
     random.seed(0)
@@ -62,7 +62,7 @@ def _convert_dataset(data, tfrecord_path, dataset):
 if __name__ == '__main__':
 
     data = get_data("train_oversampling.txt")
-    _convert_dataset(data, "../data/tfrecord/", "train")
+    _convert_dataset(data, "../../data/tfrecord/", "train")
 
     data = get_data("valid.txt")
-    _convert_dataset(data, "../data/tfrecord/", "valid")
+    _convert_dataset(data, "../../data/tfrecord/", "valid")

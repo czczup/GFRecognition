@@ -13,7 +13,7 @@ def get_data(dataset):
     class_ids = [int(item[0].split("/")[-1].split("_")[-1].split(".")[0])-1 for item in table.values]
     data = []
     for index, filename in enumerate(filenames):
-        visit = np.load("../data/train_visit/"+filename+".npy")
+        visit = np.load("../data/npy/train_visit/"+filename+".npy")[:, :, 0:24]
         label = class_ids[index]
         data.append([visit, label])
     random.seed(0)

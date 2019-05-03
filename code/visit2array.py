@@ -3,6 +3,8 @@ import numpy as np
 import sys
 import datetime
 import pandas as pd
+import os
+
 
 date2position = {}
 datestr2dateint = {}
@@ -39,7 +41,7 @@ def visit2array_test():
         filename = str(i).zfill(6)
         table = pd.read_table("../data/test_visit/test/"+filename+".txt", header=None)
         array = visit2array(table)
-        np.save("../data/test_visit/test/"+filename+".npy", array)
+        np.save("../data/npy/test_visit/"+filename+".npy", array)
         sys.stdout.write('\r>> Processing visit data %d/%d'%(i+1, 10000))
         sys.stdout.flush()
     sys.stdout.write('\n')
@@ -54,7 +56,7 @@ def visit2array_train():
     for index, filename in enumerate(filenames):
         table = pd.read_table("../data/train_visit/"+filename+".txt", header=None)
         array = visit2array(table)
-        np.save("../data/train_visit/"+filename+".npy", array)
+        np.save("../data/npy/train_visit/"+filename+".npy", array)
         sys.stdout.write('\r>> Processing visit data %d/%d'%(index+1, length))
         sys.stdout.flush()
     sys.stdout.write('\n')
@@ -69,7 +71,7 @@ def visit2array_valid():
     for index, filename in enumerate(filenames):
         table = pd.read_table("../data/train_visit/"+filename+".txt", header=None)
         array = visit2array(table)
-        np.save("../data/train_visit/"+filename+".npy", array)
+        np.save("../data/npy/train_visit/"+filename+".npy", array)
         sys.stdout.write('\r>> Processing visit data %d/%d'%(index+1, length))
         sys.stdout.flush()
     sys.stdout.write('\n')
@@ -77,7 +79,10 @@ def visit2array_valid():
 
 
 if __name__ == '__main__':
-
+    if not os.path.exists("../data/npy/test_visit/"):
+        os.makedirs("../data/npy/test_visit/")
+    if not os.path.exists("../data/npy/train_visit/"):
+        os.makedirs("../data/npy/train_visit/")
     visit2array_train()
     visit2array_valid()
     visit2array_test()

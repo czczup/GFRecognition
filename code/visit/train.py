@@ -1,4 +1,4 @@
-from model_visit import VisitModel
+from model import VisitModel
 import tensorflow as tf
 import time
 import os
@@ -15,8 +15,6 @@ def read_and_decode_train(filename):
                                        })  # return image and label
     image = tf.decode_raw(features['visit'], tf.float64)
     image = tf.reshape(image, [7, 26, 24])
-    # image = tf.image.per_image_standardization(image)
-    # image = tf.cast(image, tf.float32) / 255.0
     label = tf.cast(features['label'], tf.int64)
     return image, label
 
@@ -32,15 +30,13 @@ def read_and_decode_valid(filename):
                                        })  # return image and label
     image = tf.decode_raw(features['visit'], tf.float64)
     image = tf.reshape(image, [7, 26, 24])
-    # image = tf.image.per_image_standardization(image)
-    # image = tf.cast(image, tf.float32) / 255.0
     label = tf.cast(features['label'], tf.int64)
     return image, label
 
 
 def load_training_set():
     with tf.name_scope('input_train'):
-        image_train, label_train = read_and_decode_train("../data/tfrecord/train_visit.tfrecord")
+        image_train, label_train = read_and_decode_train("../../data/tfrecord/train_visit.tfrecord")
         image_batch_train, label_batch_train = tf.train.shuffle_batch(
             [image_train, label_train], batch_size=batch_size, capacity=10240, min_after_dequeue=5120, num_threads=4
         )
@@ -48,9 +44,8 @@ def load_training_set():
 
 
 def load_valid_set():
-    # Load Testing set.
     with tf.name_scope('input_valid'):
-        image_valid, label_valid = read_and_decode_valid("../data/tfrecord/valid_visit.tfrecord")
+        image_valid, label_valid = read_and_decode_valid("../../data/tfrecord/valid_visit.tfrecord")
         image_batch_valid, label_batch_valid = tf.train.shuffle_batch(
             [image_valid, label_valid], batch_size=batch_size, capacity=10240, min_after_dequeue=5120, num_threads=4
         )
@@ -58,7 +53,6 @@ def load_valid_set():
 
 
 def train(model):
-    # network
     amount = 84078
     image_batch_train, label_batch_train = load_training_set()
     image_batch_valid, label_batch_valid = load_valid_set()
@@ -74,10 +68,10 @@ def train(model):
         sess.run(tf.local_variables_initializer())
         sess.run(tf.global_variables_initializer())
         # Recording training process.
-        writer_train = tf.summary.FileWriter("../model/"+dirId+"/log/train", sess.graph)
-        writer_valid = tf.summary.FileWriter("../model/"+dirId+"/log/valid", sess.graph)
+        writer_train = tf.summary.FileWriter("../../model/"+dirId+"/log/train", sess.graph)
+        writer_valid = tf.summary.FileWriter("../../model/"+dirId+"/log/valid", sess.graph)
 
-        last_file = tf.train.latest_checkpoint("../model/"+dirId)
+        last_file = tf.train.latest_checkpoint("../../model/"+dirId)
         var_list = [var for var in tf.global_variables() if "moving" in var.name]
         var_list += [var for var in tf.global_variables() if "global_step" in var.name]
         var_list += tf.trainable_variables()
@@ -113,9 +107,9 @@ def train(model):
                                                                                   amount // batch_size, acc_train,
                                                                                   acc_valid),
                       'time %.3fs' % (time.time() - time1))
-            if step % 500 == 0:
+            if step % 100 == 0:
                 print("Save the model Successfully")
-                saver.save(sess, "../model/"+dirId+"/model.ckpt", global_step=step)
+                saver.save(sess, "../../model/"+dirId+"/model.ckpt", global_step=step)
 
     coord.request_stop()
     coord.join(threads)
