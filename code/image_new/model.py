@@ -7,15 +7,15 @@ from tensorflow.contrib.framework import arg_scope
 import numpy as np
 
 
-class VisitModel(object):
+class SE_ResNeXt(object):
     def __init__(self):
-        self.image = tf.placeholder(tf.float32, [None, 24, 24, 182], name='image')
+        self.image = tf.placeholder(tf.float32, [None, 88, 88, 3], name='image')
         self.label = tf.placeholder(tf.int32, [None], name='label')
         self.one_hot = tf.one_hot(indices=self.label, depth=9, name='one_hot')
         self.global_step = tf.Variable(0, name="global_step", trainable=False)
         self.is_training = tf.placeholder(tf.bool)
 
-        self.out_dims = [16, 32, 64, 128]
+        self.out_dims = [8, 16, 32, 64, 128]
         self.cardinality = 8
         self.num_block = 1
         self.depth = 8
@@ -23,7 +23,7 @@ class VisitModel(object):
 
         self.output = self.build_SEnet(self.image)
         self.loss = self.get_loss(self.output, self.one_hot)
-        self.batch_size = 512
+        self.batch_size = 256
 
         with tf.name_scope('correct_prediction'):
             correct_prediction = tf.equal(tf.argmax(self.output, 1), tf.argmax(self.one_hot, 1))
@@ -36,6 +36,7 @@ class VisitModel(object):
 
         self.merged = tf.summary.merge_all()
         print("网络初始化成功")
+
 
     def batch_norm(self, x, is_training, scope):
         with arg_scope(
@@ -207,5 +208,5 @@ class VisitModel(object):
 
 
 if __name__=='__main__':
-    model = VisitModel()
+    model = SE_ResNeXt()
     print(model.get_num_params())
