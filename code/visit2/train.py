@@ -2,9 +2,6 @@ from model import VisitModel
 import tensorflow as tf
 import time
 import os
-import random
-import pandas as pd
-import numpy as np
 
 
 def read_and_decode_train(filename):
@@ -19,7 +16,7 @@ def read_and_decode_train(filename):
     image = tf.decode_raw(features['visit'], tf.uint8)
     image = tf.cast(image, tf.float32)
     image = tf.reshape(image, [182, 24, 24])
-    image = tf.transpose(image, [3, 2, 1])
+    image = tf.transpose(image, [2, 1, 0])
 
     label = tf.cast(features['label'], tf.int64)
     return image, label
@@ -96,8 +93,7 @@ def train(model):
                 [image_batch_train, label_batch_train, model.global_step])
             _, loss_ = sess.run([model.optimizer, model.loss], feed_dict={model.image: image_train,
                                                                           model.label: label_train,
-                                                                          model.keep_prob: 0.05,
-                                                                          model.training: True})
+                                                                          model.is_training: True})
             print('[epoch %d, step %d/%d]: loss %.6f' % (
             step // (amount // batch_size), step % (amount // batch_size), amount // batch_size, loss_),
                   'time %.3fs' % (time.time() - time1))
@@ -105,15 +101,13 @@ def train(model):
                 image_train, label_train = sess.run([image_batch_train, label_batch_train])
                 acc_train, summary = sess.run([model.accuracy, model.merged], feed_dict={model.image: image_train,
                                                                                          model.label: label_train,
-                                                                                         model.keep_prob: 1.0,
-                                                                                         model.training: True})
+                                                                                         model.is_training: True})
                 writer_train.add_summary(summary, step)
                 image_valid, label_valid = sess.run([image_batch_valid, label_batch_valid])
                 acc_valid, summary, output = sess.run([model.accuracy, model.merged, model.output],
                                                       feed_dict={model.image: image_valid,
                                                                  model.label: label_valid,
-                                                                 model.keep_prob: 1.0,
-                                                                 model.training: True})
+                                                                 model.is_training: True})
                 print(output[0])
                 writer_valid.add_summary(summary, step)
                 print('[epoch %d, step %d/%d]: train acc %.3f, valid acc %.3f' % (step // (amount // batch_size),

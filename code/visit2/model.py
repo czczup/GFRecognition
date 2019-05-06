@@ -23,7 +23,7 @@ class VisitModel(object):
 
         self.output = self.build_SEnet(self.image)
         self.loss = self.get_loss(self.output, self.one_hot)
-        self.batch_size = 512
+        self.batch_size = 2048
 
         with tf.name_scope('correct_prediction'):
             correct_prediction = tf.equal(tf.argmax(self.output, 1), tf.argmax(self.one_hot, 1))
